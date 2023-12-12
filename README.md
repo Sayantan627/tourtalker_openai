@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Project Title
 
-## Getting Started
+TourTalker
 
-First, run the development server:
+## Demo link:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Access my site at [tourtalker-openai.vercel.app](https://tourtalker-openai.vercel.app/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Table of Content:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- [About The App](#about-the-app)
+- [Screenshots](#screenshots)
+- [Technologies](#technologies)
+- [Setup](#setup)
+- [Approach](#approach)
+- [Status](#status)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## About The App
 
-## Learn More
+TourTalker was conceived to seamlessly blend chat communication with the joy of global exploration. The project aims to provide users with a unique platform where they can engage in lively conversations using OpenAI-powered chat functionalities. The motivation behind TourTalker is to not only facilitate meaningful interactions but also to enhance the travel experience. By allowing users to input a city and country, TourTalker generates personalized recommendations for famous tourist places, transforming ordinary conversations into global adventures. The project's goal is to make communication and discovery effortlessly intertwined, offering users a novel and enjoyable way to explore the world.
 
-To learn more about Next.js, take a look at the following resources:
+## Screenshots
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+`![Screenshot 1](/images/S1.png)`
+`![Screenshot 2](/images/S2.png)`
+`![Screenshot 3](/images/S3.png)`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Technologies
 
-## Deploy on Vercel
+I used `html`, `css`, `Javascript`, `ReactJs`, `NextJs`, `TailwindCSS`, `React Query`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Setup
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- download or clone the repository
+- run `npm install`
+- run `npm run dev`
+- Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+
+## Approach
+
+- I used [DaisyUI](https://daisyui.com) for components and themes.
+- [TailwindCSS](https://tailwindcss.com) is used to design the application with awesome styles and responsiveness
+- Used [Clerk](https://clerk.com) for authentication.
+- I used [Prisma](https://www.prisma.io) which is an open-source ORM that makes it fun and safe to work with a database like MySQL, Postgres, SQL Server, or MongoDB.
+- Used OpenAI API for creating the AI chat system 🤖 and for generating famous tourist attractions of a city
+- React-icons for the icons in the app
+
+## Status
+
+TourTalker is still in progress. `Version 2` will be out soon.
