@@ -21,9 +21,9 @@ TourTalker was conceived to seamlessly blend chat communication with the joy of 
 
 ## Screenshots
 
-`![Screenshot 1](/images/S1.png)`
-`![Screenshot 2](/images/S2.png)`
-`![Screenshot 3](/images/S3.png)`
+![Screenshot 1](/images/S1.png)
+![Screenshot 2](/images/S2.png)
+![Screenshot 3](/images/S3.png)
 
 ## Technologies
 
