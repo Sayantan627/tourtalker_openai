@@ -31,7 +31,7 @@ const NewTour = () => {
       }
 
       const newTour = await generateTourResponse(destination);
-      if (newTour) {
+      if (!newTour) {
         toast.error("No matching city found...");
         return null;
       }
