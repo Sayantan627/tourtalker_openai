@@ -3,8 +3,8 @@ import { UserButton, currentUser, auth } from "@clerk/nextjs";
 
 const MemberProfile = async () => {
   const user = await currentUser();
-  const { userId } = auth();
-  await fetchOrGenerateTokens(userId);
+  // const { userId } = auth();
+  // await fetchOrGenerateTokens(userId);
   // console.log(userId);
   return (
     <div className="px-4 flex items-center gap-2">
