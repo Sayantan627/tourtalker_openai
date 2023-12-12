@@ -6,11 +6,15 @@ import {
   getExistingTour,
   generateTourResponse,
   createNewTour,
+  fetchUserTokensById,
+  subtractTokens,
 } from "@/utils/action";
 import toast from "react-hot-toast";
+import { useAuth } from "@clerk/nextjs";
 
 const NewTour = () => {
   const queryClient = useQueryClient();
+  const { userId } = useAuth();
   const {
     mutate,
     isPending,
@@ -19,14 +23,23 @@ const NewTour = () => {
     mutationFn: async (destination) => {
       const existingTour = await getExistingTour(destination);
       if (existingTour) return existingTour;
+
+      const currentTokens = await fetchUserTokensById(userId);
+      if (currentTokens < 300) {
+        toast.error("Token balance is too low...");
+        return;
+      }
+
       const newTour = await generateTourResponse(destination);
       if (newTour) {
-        await createNewTour(newTour);
-        queryClient.invalidateQueries({ queryKey: ["tours"] });
-        return newTour;
+        toast.error("No matching city found...");
+        return null;
       }
-      toast.error("No matching city found...");
-      return null;
+      await createNewTour(newTour.tour);
+      queryClient.invalidateQueries({ queryKey: ["tours"] });
+      const newTokens = await subtractTokens(userId, newTour.tokens);
+      toast.success(`${newTokens} tokens remaining`);
+      return newTour.tour;
     },
   });
 
